@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuário</title>
+</head>
+<body>
+  <h2>Registro de Usuário</h2>
+  
+  <form id="registrationForm">
+    <label for="username">Nome de usuário:</label>
+    <input type="text" id="username" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" required>
+
+    <label for="password">Senha:</label>
+    <input type="password" id="password" required>
+
+    <button type="button" onclick="registerUser()">Registrar</button>
+  </form>
+
+  <script>
+    function registerUser() {
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      // Aqui você normalmente faria uma solicitação para o servidor para criar o usuário
+      // e salvar as informações no banco de dados. Este exemplo é simplificado.
+
+      console.log('Usuário registrado com sucesso:');
+      console.log('Nome de usuário:', username);
+      console.log('E-mail:', email);
+      // Não exiba a senha em um ambiente de produção
+    }
+  </script>
+</body>
+</html>
